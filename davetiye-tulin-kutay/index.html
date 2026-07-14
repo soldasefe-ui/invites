@@ -2,16 +2,23 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Düğün Davetiyesi</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Davetiye</title>
     <link rel="stylesheet" href="css/base.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div id="openingOverlay" class="opening-overlay">
     <div class="opening-screen">
-        <button id="waxSealButton" class="heart-open-button" type="button" aria-label="Davetiyeyi aç"></button>
+        <button
+                id="waxSealButton"
+                class="ring-click-area"
+                aria-label="Davetiyeyi Aç">
+        </button>
     </div>
 </div>
 
@@ -19,15 +26,19 @@
     <div class="page-shell">
 
         <section class="invite-cover-section">
-            <div class="invite-cover-image">
-                <div class="cover-music-overlay">
-                    <p class="cover-music-note">Müziği açmak için dokunun.</p>
-                    <button id="musicStartBtn" class="cover-music-button" type="button" aria-label="Müziği başlat">
-                        <span class="play-triangle"></span>
-                    </button>
-                </div>
-            </div>
-        </section>
+
+        <!-- 🔥 ÜSTTE AYRI BLOK -->
+        <div class="top-music-bar">
+            <p class="cover-music-note">Müziği açmak için dokunun.</p>
+            <button id="musicStartBtn" class="cover-music-button">
+                <span class="play-triangle"></span>
+            </button>
+        </div>
+
+        <!-- KAPAK -->
+        <div class="invite-cover-image"></div>
+
+    </section>
 
         <p class="intro-note">
             Etkinlik ile ilgili tüm detayları, katılım durumunuzu, çektiğiniz fotoğrafları bizimle
@@ -36,57 +47,125 @@
 
         <section class="details-section">
             <h2 class="section-title">Etkinlik Detayları</h2>
+
             <div class="details-card">
                 <div class="detail-row">
                     <span class="detail-label">Tarih</span>
-                    <span class="detail-value">27 Eylül 2026</span>
+                    <span class="detail-value">22 Ağustos 2026</span>
                 </div>
+
                 <div class="detail-row">
                     <span class="detail-label">Saat</span>
-                    <span class="detail-value">19:00</span>
+                    <span class="detail-value">19:30</span>
                 </div>
+
                 <div class="detail-row">
                     <span class="detail-label">Mekan</span>
-                    <span class="detail-value">Pamira Event & Hall</span>
+                    <span class="detail-value">Casa Giallo Managed By Dedeman</span>
                 </div>
+
                 <div class="detail-row detail-row-address">
                     <span class="detail-label">Organizasyon Akışı</span>
                     <span class="detail-value">
-                        18.45 - Kokteyl<br>
-                        19.00 - Nikah<br>
-                        19.30 - Yemek<br>
-                        20.00 - Müzik
-                    </span>
+        19.30 - Kokteyl<br>
+        21.00 - Akşam Yemeği<br>
+        22.00 - After Party
+    </span>
                 </div>
             </div>
         </section>
 
         <section class="gallery-section">
-            <h2 class="section-title">Pamira Event & Hall</h2>
-            <div class="venue-image-wrapper">
-                <img class="venue-image" src="images/pamira.jpg" alt="Mekan görseli">
+            <h2 class="section-title">Casa Giallo Managed By Dedeman</h2>
+
+            <div class="gallery-scroll">
+                <div class="gallery-item">
+                    <img src="images/venue.webp" alt="Mekan görseli">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/venue2.jpg" alt="Mekan görseli">
+                </div>
             </div>
+
             <p class="map-note">Konumu haritalarda görmek için tıklayınız</p>
-            <a class="primary-button" href="https://maps.app.goo.gl/cfBa4GZyL5vdX4Fi9" target="_blank">
+
+            <a class="primary-button" href="https://maps.app.goo.gl/VaTLVfYBESVb4hsK9" target="_blank">
                 Konuma Git
             </a>
         </section>
 
+        <section class="dress-code-section">
+            <h2 class="section-title">Dress Code</h2>
+
+            <div class="dress-code-card">
+
+                <div class="dress-code-image">
+                    <img src="images/dressCode.jpg" alt="Dress Code">
+                </div>
+
+                <div class="dress-code-content">
+
+                    <p class="dress-code-description">
+                        Bu özel günümüzde sizleri zarif ve şık kombinlerle aramızda görmekten mutluluk duyarız.
+                        Konseptimize uygun tonlarda tercih edeceğiniz kıyafetler, gecemizin bütünlüğüne
+                        katkı sağlayacaktır.
+                    </p>
+
+                    <div class="dress-item">
+                        <span class="dress-title">Kadın</span>
+
+                        <ul class="dress-list">
+                            <li>Canlı ve renkli yaz tonları tercih edilmesini rica ediyoruz.</li>
+                            <li>Siyah ve koyu tonlar tercih etmemenizi rica ederiz.</li>
+                        </ul>
+                    </div>
+
+                    <div class="dress-item">
+                        <span class="dress-title">Erkek</span>
+
+                        <ul class="dress-list">
+                            <li>Siyah takım elbise</li>
+                            <li>Beyaz gömlek</li>
+                            <li>Siyah papyon</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
         <section class="countdown-section">
             <h2 class="section-title">Geri Sayım</h2>
+
             <div class="countdown-grid countdown-inline">
-                <div class="countdown-card"><span id="days" class="count-number">00</span><span class="count-label">Gün</span></div>
-                <div class="countdown-card"><span id="hours" class="count-number">00</span><span class="count-label">Saat</span></div>
-                <div class="countdown-card"><span id="minutes" class="count-number">00</span><span class="count-label">Dakika</span></div>
-                <div class="countdown-card"><span id="seconds" class="count-number">00</span><span class="count-label">Saniye</span></div>
+                <div class="countdown-card">
+                    <span id="days" class="count-number">00</span>
+                    <span class="count-label">Gün</span>
+                </div>
+
+                <div class="countdown-card">
+                    <span id="hours" class="count-number">00</span>
+                    <span class="count-label">Saat</span>
+                </div>
+
+                <div class="countdown-card">
+                    <span id="minutes" class="count-number">00</span>
+                    <span class="count-label">Dakika</span>
+                </div>
+
+                <div class="countdown-card">
+                    <span id="seconds" class="count-number">00</span>
+                    <span class="count-label">Saniye</span>
+                </div>
             </div>
         </section>
 
         <section class="note-section">
             <div class="note-card">
                 <p class="note-text">
-                    Küçük çocuklarımızın erken uyku saatini düşünerek onlara şimdiden iyi uykular, sizlere de bizimle keyifli bir gece dileriz.
-                    Lütfen katılım durumunuzu bizimle paylaşın.
+                    "Küçük misafirlerimizin erken uyku saatini düşünerek onlara şimdiden iyi uykular, sizlere de bizimle keyifli bir gece dileriz.
+                    Lütfen katılım durumunuzu bizimle paylaşın."
                 </p>
             </div>
         </section>
@@ -185,6 +264,6 @@
     <source src="assets/music/romantic.mp3" type="audio/mpeg">
 </audio>
 
-<script src="js/app.js"></script>
+<script defer src="js/app.js"></script>
 </body>
 </html>

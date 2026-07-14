@@ -4,28 +4,32 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// URL'e bir şey yazılmazsa ana sayfayı göster (opsiyonel)
-app.get('/', (req, res) => {
-    res.send('Davetiye sistemi çalışıyor. Örnek: domain.com/davetiye-tulin-kutay');
-});
+// 1. Önce genel statik dosyaları tanımla
+app.use(express.static(__dirname));
 
-// Gelen her isteği (URL kısmını) bir klasör ismi olarak kabul et
-app.get('/:folder', (req, res) => {
+// 2. Özel klasör yönlendirmeleri
+app.use('/:folder', (req, res, next) => {
     const folder = req.params.folder;
     const folderPath = path.join(__dirname, folder);
-    const indexPath = path.join(folderPath, 'index.html');
 
-    // Klasör ve içindeki index.html var mı kontrol et
-    if (fs.existsSync(folderPath) && fs.existsSync(indexPath)) {
-        res.sendFile(indexPath);
+    if (fs.existsSync(folderPath)) {
+        express.static(folderPath)(req, res, next);
     } else {
-        res.status(404).send('Böyle bir davetiye bulunamadı.');
+        next();
     }
 });
 
-// CSS, JS ve resim dosyalarının düzgün yüklenmesi için statik klasörleri aç
-app.use(express.static(__dirname));
+app.get('/:folder', (req, res) => {
+    const folder = req.params.folder;
+    const indexPath = path.join(__dirname, folder, 'index.html');
+
+    if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        res.status(404).send('Davetiye bulunamadı.');
+    }
+});
 
 app.listen(PORT, () => {
-    console.log(`Sistem aktif: http://localhost:${PORT}`);
+    console.log(`Sunucu aktif: http://localhost:${PORT}`);
 });

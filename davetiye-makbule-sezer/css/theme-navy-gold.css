@@ -1,0 +1,89 @@
+:root {
+    --bg-main-start: #07111f;
+    --bg-main-mid: #0d1c31;
+    --bg-main-end: #132746;
+    --bg-main-radial: rgba(204, 170, 108, 0.14);
+
+    --overlay-bg-start: #020812;
+    --overlay-bg-mid: #071222;
+    --overlay-bg-end: #091729;
+
+    --envelope-bg-start: #0e2a4a;
+    --envelope-bg-mid: #0a2140;
+    --envelope-bg-end: #071a33;
+
+    --panel-top-start: #12325a;
+    --panel-top-end: #0b2342;
+    --panel-bottom-start: #0a2140;
+    --panel-bottom-end: #06172e;
+
+    --text-main: #f4ead7;
+    --text-strong: #f4e7cf;
+    --text-soft: #d4c1a1;
+    --text-muted: #c6a777;
+    --text-heading: #f3e2c4;
+    --text-note: #ebdcc4;
+
+    --accent: #d4b06d;
+    --accent-dark: #b98736;
+    --accent-soft: #d6b37a;
+    --accent-line: rgba(198, 154, 78, 0.55);
+    --accent-border: rgba(206, 169, 108, 0.24);
+    --accent-border-soft: rgba(201, 163, 105, 0.18);
+    --accent-border-lighter: rgba(203, 166, 111, 0.12);
+
+    --gold-title: #f2dfbc;
+    --gold-subtitle: rgba(230, 203, 150, 0.90);
+    --gold-top-ornament: #c89e63;
+    --gold-dot: #cda668;
+    --gold-label: #d3ae75;
+    --gold-count-label: #d8bc8f;
+    --gold-modal-close: #d0ae78;
+    --gold-modal-subtitle: #d0b892;
+
+    --button-text: #fffdf8;
+    --button-circle-text: #f5e6c8;
+    --button-circle-start: #e6c57e;
+    --button-circle-end: #b07a2a;
+
+    --card-bg: rgba(12, 25, 44, 0.68);
+    --card-bg-strong-start: rgba(12, 25, 44, 0.76);
+    --card-bg-strong-end: rgba(15, 31, 54, 0.84);
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-bg-soft: rgba(255, 255, 255, 0.08);
+
+    --countdown-bg-start: rgba(9, 19, 34, 0.96);
+    --countdown-bg-end: rgba(14, 28, 49, 0.98);
+
+    --gallery-bg: #0f1f36;
+    --gallery-scrollbar: rgba(155, 124, 74, 0.35);
+
+    --modal-overlay: rgba(4, 10, 20, 0.62);
+    --modal-bg-start: #0d1b31;
+    --modal-bg-end: #132746;
+
+    --input-text: #f5ead7;
+    --input-placeholder: rgba(240, 223, 194, 0.55);
+    --input-border: rgba(191, 153, 97, 0.22);
+    --input-focus-ring: rgba(196, 151, 85, 0.14);
+    --accent-focus: #be9253;
+
+    --success-bg: rgba(40, 92, 52, 0.24);
+    --success-text: #d7f0dc;
+    --success-border: rgba(120, 180, 134, 0.24);
+
+    --shadow-dark: rgba(0, 0, 0, 0.20);
+    --shadow-darker: rgba(0, 0, 0, 0.30);
+    --shadow-deep: rgba(3, 8, 18, 0.34);
+    --shadow-gold: rgba(131, 91, 23, 0.26);
+
+    --date-pill-bg: rgba(255, 255, 255, 0.06);
+    --date-pill-border: rgba(206, 169, 108, 0.24);
+    --date-pill-shadow: rgba(0, 0, 0, 0.16);
+    --date-pill-text: #f0dec0;
+
+    --countdown-border: rgba(214, 180, 120, 0.18);
+    --countdown-shadow: rgba(3, 8, 18, 0.34);
+    --count-number-color: #f8ebd1;
+    --count-label-color: #d8bc8f;
+}

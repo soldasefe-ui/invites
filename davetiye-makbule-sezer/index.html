@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Düğün Davetiyesi</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="openingOverlay" class="opening-overlay">
+    <div class="opening-screen">
+        <button id="waxSealButton" class="heart-open-button" type="button" aria-label="Davetiyeyi aç"></button>
+    </div>
+</div>
+
+<div id="mainContent" class="main-content hidden">
+    <div class="page-shell">
+
+        <section class="invite-cover-section">
+
+            <div class="cover-music-overlay">
+                <p class="cover-music-note">
+                    Müziği açmak için dokunun.
+                </p>
+
+                <button id="musicStartBtn"
+                        class="cover-music-button">
+                    <span class="play-triangle"></span>
+                </button>
+            </div>
+
+            <div class="invite-cover-image"></div>
+
+        </section>
+
+        <p class="intro-note">
+            Etkinlik ile ilgili tüm detayları, katılım durumunuzu, çektiğiniz fotoğrafları bizimle
+            paylaşabileceğiniz alanı ve etkinliğin gerçekleşeceği konum bilgisini davetiyenin devamında görebilirsiniz :)
+        </p>
+
+        <section class="details-section">
+            <h2 class="section-title">Etkinlik Detayları</h2>
+            <div class="details-card">
+                <div class="detail-row">
+                    <span class="detail-label">Tarih</span>
+                    <span class="detail-value">23 Ağustos 2026</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Saat</span>
+                    <span class="detail-value">15:00</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Mekan</span>
+                    <span class="detail-value">AltınPark Düğün Salonu</span>
+                </div>
+                <div class="detail-row detail-row-address">
+                    <span class="detail-label">Organizasyon Akışı</span>
+                    <span class="detail-value">
+                        15.00 - Bayrak Kaldırma<br>
+                        18.30 - Nikah<br>
+                        21.00 - Kına<br>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2 class="section-title">AltınPark Düğün Salonu</h2>
+            <div class="gallery-scroll">
+                <div class="gallery-item">
+                    <img src="images/venue1.png" alt="Mekan görseli">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/venue2.webp" alt="Mekan görseli">
+                </div>
+            </div>
+            <p class="map-note">Konumu haritalarda görmek için tıklayınız</p>
+            <a class="primary-button" href="https://maps.app.goo.gl/BaoqXfT1uGq64dhA7" target="_blank">
+                Konuma Git
+            </a>
+        </section>
+
+        <section class="countdown-section">
+            <h2 class="section-title">Geri Sayım</h2>
+            <div class="countdown-grid countdown-inline">
+                <div class="countdown-card"><span id="days" class="count-number">00</span><span class="count-label">Gün</span></div>
+                <div class="countdown-card"><span id="hours" class="count-number">00</span><span class="count-label">Saat</span></div>
+                <div class="countdown-card"><span id="minutes" class="count-number">00</span><span class="count-label">Dakika</span></div>
+                <div class="countdown-card"><span id="seconds" class="count-number">00</span><span class="count-label">Saniye</span></div>
+            </div>
+        </section>
+
+        <section class="note-section">
+            <div class="note-card">
+                <p class="note-text">
+                    Lütfen katılım durumunuzu bizimle paylaşın :)
+                </p>
+            </div>
+        </section>
+
+        <section class="rsvp-section">
+            <button id="openRsvpBtn" class="primary-button" type="button">
+                Katılım Durumunu Bildir
+            </button>
+        </section>
+
+        <div class="photo-deco"></div>
+
+        <p class="memory-note">
+            Bu özel günümüzde çektiğiniz fotoğrafları bizimle paylaşabilirsiniz :)
+        </p>
+
+        <section class="memory-upload-trigger-section">
+            <button id="openMemoryUploadBtn" class="primary-button memory-upload-open-btn" type="button">
+                Anı Yükleyin
+            </button>
+        </section>
+    </div>
+</div>
+
+<div id="rsvpModal" class="modal-overlay hidden">
+    <div class="modal-box">
+        <button id="closeModalBtn" class="modal-close" type="button">×</button>
+
+        <h3 class="modal-title">Katılım Bilgisi</h3>
+        <p class="modal-subtitle">Lütfen katılım durumunuzu bizimle paylaşın</p>
+
+        <form id="rsvpForm" class="rsvp-form">
+            <label class="form-label">Ad Soyad</label>
+            <input id="fullName" class="form-input" type="text" placeholder="Ad Soyad">
+
+            <label class="form-label">Katılım Durumu</label>
+            <select id="attendanceStatus" class="form-input">
+                <option value="">Seçiniz</option>
+                <option value="KATILIYOR">Katılıyorum</option>
+                <option value="KATILAMIYOR">Katılamıyorum</option>
+            </select>
+
+            <label class="form-label">Kişi Sayısı</label>
+            <input id="guestCount" class="form-input" type="number" min="1" placeholder="Örn: 2">
+
+            <label class="form-label">Not</label>
+            <textarea id="note" class="form-input form-textarea"></textarea>
+
+            <div id="rsvpResult" class="rsvp-result hidden"></div>
+
+            <button id="rsvpSubmitBtn" class="primary-button full-width submit-button" type="submit">
+                <span class="submit-text">Gönder</span>
+                <span class="submit-spinner hidden"></span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div id="memoryUploadModal" class="modal-overlay hidden">
+    <div class="modal-box">
+        <button id="closeMemoryUploadBtn" class="modal-close" type="button">×</button>
+
+        <h3 class="modal-title">Anı Yükleyin</h3>
+        <p class="modal-subtitle">
+            Bu özel günümüzde çektiğiniz fotoğrafları bizimle paylaşabilirsiniz.
+        </p>
+
+        <form id="memoryUploadForm" class="rsvp-form">
+            <label class="form-label">Ad Soyad</label>
+            <input id="memoryFullName" class="form-input" type="text" placeholder="Ad Soyad">
+
+            <label class="form-label">Not</label>
+            <textarea id="memoryNote" class="form-input form-textarea" placeholder="İsterseniz kısa bir not bırakın"></textarea>
+
+            <label class="form-label">Fotoğraf Seç</label>
+            <input id="memoryFile" type="file" accept="image/*" multiple hidden>
+
+            <div class="file-upload-wrapper">
+                <button type="button" id="customFileBtn" class="gold-upload-btn">
+                    Fotoğraf Seç
+                </button>
+                <span id="fileNameText" class="file-name-text">Dosya seçilmedi</span>
+            </div>
+
+            <div id="memoryUploadResult" class="rsvp-result hidden"></div>
+
+            <button id="memoryUploadBtn" class="primary-button full-width submit-button" type="submit">
+                <span class="submit-text">Fotoğraf Yükle</span>
+                <span class="submit-spinner hidden"></span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="assets/music/makbule.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/app.js"></script>
+</body>
+</html>
